@@ -22,19 +22,19 @@ class ViewController: UIViewController {
 	@IBOutlet weak var button: UIButton!
 	@IBAction func buttonPress(sender: AnyObject) {
 		
-		var request = HTTPTask()
+		let request = HTTPTask()
 		
 		if asleep {
 			request.POST(baseUrlString + "awake", parameters: nil, completionHandler: {(response: HTTPResponse) in
 				
 				if let err = response.error {
-					println("error: \(err.localizedDescription)")
+					print("error: \(err.localizedDescription)")
 					return
 				}
 				
 				if let data = response.responseObject as? NSData {
 					let str = NSString(data: data, encoding: NSUTF8StringEncoding)
-					println(str!)
+					print(str!)
 					
 					dispatch_async(dispatch_get_main_queue(), {
 						self.button.setTitle(self.asleepText, forState: .Normal)
@@ -50,13 +50,13 @@ class ViewController: UIViewController {
 			request.POST(baseUrlString + "asleep", parameters: nil, completionHandler: {(response: HTTPResponse) in
 				
 				if let err = response.error {
-					println("error: \(err.localizedDescription)")
+					print("error: \(err.localizedDescription)")
 					return
 				}
 				
 				if let data = response.responseObject as? NSData {
 					let str = NSString(data: data, encoding: NSUTF8StringEncoding)
-					println(str!)
+					print(str!)
 					
 					dispatch_async(dispatch_get_main_queue(), {
 						self.button.setTitle(self.awakeText, forState: .Normal)
@@ -75,20 +75,20 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		println(button.state)
+		print(button.state)
 		
-		var request = HTTPTask()
+		let request = HTTPTask()
 		request.GET(baseUrlString + "status", parameters: nil, completionHandler: {(response: HTTPResponse) in
 			
 			if let err = response.error {
-				println("error: \(err.localizedDescription)")
+				print("error: \(err.localizedDescription)")
 				return
 			}
 			
 			if let data = response.responseObject as? NSData {
 				let str = NSString(data: data, encoding: NSUTF8StringEncoding)
 				
-				println(str)
+				print(str)
 				
 				if str! == "asleep" {
 					dispatch_async(dispatch_get_main_queue(), {
