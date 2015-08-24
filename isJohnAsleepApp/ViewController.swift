@@ -15,10 +15,12 @@ class ViewController: UIViewController {
 	
 	var asleep = false
 	
-	//	let baseUrlString = "http://www.isjohnasleep.com/"
-	let baseUrlString = "http://192.168.1.100:3000/"
-
+	let baseUrlString = "http://isjohnasleep.m4r5.io/"
+//	let baseUrlString = "http://192.168.1.100:3000/"
 	
+	let awakeColor = UIColor(red: 0.17, green: 0.24, blue: 0.31, alpha: 1.0)
+	let asleepColor = UIColor(red: 0.20, green: 0.60, blue: 0.86, alpha: 1.0)
+
 	@IBOutlet weak var button: UIButton!
 	@IBAction func buttonPress(sender: AnyObject) {
 		
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
 					dispatch_async(dispatch_get_main_queue(), {
 						self.button.setTitle(self.asleepText, forState: .Normal)
 						UIView.animateWithDuration(1, animations: {
-							self.view.backgroundColor = UIColor.redColor()
+							self.view.backgroundColor = self.asleepColor
 						})
 					})
 
@@ -61,7 +63,7 @@ class ViewController: UIViewController {
 					dispatch_async(dispatch_get_main_queue(), {
 						self.button.setTitle(self.awakeText, forState: .Normal)
 						UIView.animateWithDuration(1, animations: {
-							self.view.backgroundColor = UIColor.blueColor()
+							self.view.backgroundColor = self.awakeColor
 						})
 					})
 
@@ -93,12 +95,14 @@ class ViewController: UIViewController {
 				if str! == "asleep" {
 					dispatch_async(dispatch_get_main_queue(), {
 						self.button.setTitle(self.awakeText, forState: .Normal)
+						self.view.backgroundColor = self.awakeColor
 					})
 					
 					self.asleep = true
 				} else {
 					dispatch_async(dispatch_get_main_queue(), {
 						self.button.setTitle(self.asleepText, forState: .Normal)
+						self.view.backgroundColor = self.asleepColor
 					})
 
 					self.asleep = false
