@@ -12,24 +12,12 @@
 		46492B821B895E4F00B8C9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46492B801B895E4F00B8C9EB /* Main.storyboard */; };
 		46492B841B895E4F00B8C9EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46492B831B895E4F00B8C9EB /* Images.xcassets */; };
 		46492B871B895E4F00B8C9EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46492B851B895E4F00B8C9EB /* LaunchScreen.xib */; };
-		46492B931B895E4F00B8C9EB /* isJohnAsleepAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46492B921B895E4F00B8C9EB /* isJohnAsleepAppTests.swift */; };
 		46492BA31B8964D000B8C9EB /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46492B9D1B8964D000B8C9EB /* HTTPRequestSerializer.swift */; };
 		46492BA41B8964D000B8C9EB /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46492B9E1B8964D000B8C9EB /* HTTPResponseSerializer.swift */; };
-		46492BA51B8964D000B8C9EB /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46492B9F1B8964D000B8C9EB /* HTTPSecurity.swift */; };
 		46492BA61B8964D000B8C9EB /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46492BA01B8964D000B8C9EB /* HTTPStatusCode.swift */; };
 		46492BA71B8964D000B8C9EB /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46492BA11B8964D000B8C9EB /* HTTPTask.swift */; };
 		46492BA81B8964D000B8C9EB /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46492BA21B8964D000B8C9EB /* HTTPUpload.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		46492B8D1B895E4F00B8C9EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46492B6F1B895E4F00B8C9EB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 46492B761B895E4F00B8C9EB;
-			remoteInfo = isJohnAsleepApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		46492B771B895E4F00B8C9EB /* isJohnAsleepApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = isJohnAsleepApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,12 +27,8 @@
 		46492B811B895E4F00B8C9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46492B831B895E4F00B8C9EB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46492B861B895E4F00B8C9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		46492B8C1B895E4F00B8C9EB /* isJohnAsleepAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = isJohnAsleepAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46492B911B895E4F00B8C9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46492B921B895E4F00B8C9EB /* isJohnAsleepAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isJohnAsleepAppTests.swift; sourceTree = "<group>"; };
 		46492B9D1B8964D000B8C9EB /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
 		46492B9E1B8964D000B8C9EB /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
-		46492B9F1B8964D000B8C9EB /* HTTPSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSecurity.swift; sourceTree = "<group>"; };
 		46492BA01B8964D000B8C9EB /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		46492BA11B8964D000B8C9EB /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		46492BA21B8964D000B8C9EB /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
@@ -58,13 +42,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46492B891B895E4F00B8C9EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -72,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				46492B791B895E4F00B8C9EB /* isJohnAsleepApp */,
-				46492B8F1B895E4F00B8C9EB /* isJohnAsleepAppTests */,
 				46492B781B895E4F00B8C9EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				46492B771B895E4F00B8C9EB /* isJohnAsleepApp.app */,
-				46492B8C1B895E4F00B8C9EB /* isJohnAsleepAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,29 +83,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		46492B8F1B895E4F00B8C9EB /* isJohnAsleepAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				46492B921B895E4F00B8C9EB /* isJohnAsleepAppTests.swift */,
-				46492B901B895E4F00B8C9EB /* Supporting Files */,
-			);
-			path = isJohnAsleepAppTests;
-			sourceTree = "<group>";
-		};
-		46492B901B895E4F00B8C9EB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				46492B911B895E4F00B8C9EB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		46492B9C1B8964AE00B8C9EB /* SwiftHTTP */ = {
 			isa = PBXGroup;
 			children = (
 				46492B9D1B8964D000B8C9EB /* HTTPRequestSerializer.swift */,
 				46492B9E1B8964D000B8C9EB /* HTTPResponseSerializer.swift */,
-				46492B9F1B8964D000B8C9EB /* HTTPSecurity.swift */,
 				46492BA01B8964D000B8C9EB /* HTTPStatusCode.swift */,
 				46492BA11B8964D000B8C9EB /* HTTPTask.swift */,
 				46492BA21B8964D000B8C9EB /* HTTPUpload.swift */,
@@ -158,24 +115,6 @@
 			productReference = 46492B771B895E4F00B8C9EB /* isJohnAsleepApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		46492B8B1B895E4F00B8C9EB /* isJohnAsleepAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46492B991B895E4F00B8C9EB /* Build configuration list for PBXNativeTarget "isJohnAsleepAppTests" */;
-			buildPhases = (
-				46492B881B895E4F00B8C9EB /* Sources */,
-				46492B891B895E4F00B8C9EB /* Frameworks */,
-				46492B8A1B895E4F00B8C9EB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				46492B8E1B895E4F00B8C9EB /* PBXTargetDependency */,
-			);
-			name = isJohnAsleepAppTests;
-			productName = isJohnAsleepAppTests;
-			productReference = 46492B8C1B895E4F00B8C9EB /* isJohnAsleepAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,15 +123,11 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = M4R5;
 				TargetAttributes = {
 					46492B761B895E4F00B8C9EB = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					46492B8B1B895E4F00B8C9EB = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 46492B761B895E4F00B8C9EB;
 					};
 				};
 			};
@@ -210,7 +145,6 @@
 			projectRoot = "";
 			targets = (
 				46492B761B895E4F00B8C9EB /* isJohnAsleepApp */,
-				46492B8B1B895E4F00B8C9EB /* isJohnAsleepAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,13 +160,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46492B8A1B895E4F00B8C9EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -245,29 +172,12 @@
 				46492BA61B8964D000B8C9EB /* HTTPStatusCode.swift in Sources */,
 				46492BA41B8964D000B8C9EB /* HTTPResponseSerializer.swift in Sources */,
 				46492BA31B8964D000B8C9EB /* HTTPRequestSerializer.swift in Sources */,
-				46492BA51B8964D000B8C9EB /* HTTPSecurity.swift in Sources */,
 				46492B7F1B895E4F00B8C9EB /* ViewController.swift in Sources */,
 				46492B7D1B895E4F00B8C9EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46492B881B895E4F00B8C9EB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46492B931B895E4F00B8C9EB /* isJohnAsleepAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		46492B8E1B895E4F00B8C9EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 46492B761B895E4F00B8C9EB /* isJohnAsleepApp */;
-			targetProxy = 46492B8D1B895E4F00B8C9EB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		46492B801B895E4F00B8C9EB /* Main.storyboard */ = {
@@ -310,6 +220,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -376,6 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = isJohnAsleepApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.M4R5.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -386,41 +298,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = isJohnAsleepApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.M4R5.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		46492B9A1B895E4F00B8C9EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = isJohnAsleepAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/isJohnAsleepApp.app/isJohnAsleepApp";
-			};
-			name = Debug;
-		};
-		46492B9B1B895E4F00B8C9EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = isJohnAsleepAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/isJohnAsleepApp.app/isJohnAsleepApp";
 			};
 			name = Release;
 		};
@@ -441,15 +320,6 @@
 			buildConfigurations = (
 				46492B971B895E4F00B8C9EB /* Debug */,
 				46492B981B895E4F00B8C9EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		46492B991B895E4F00B8C9EB /* Build configuration list for PBXNativeTarget "isJohnAsleepAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46492B9A1B895E4F00B8C9EB /* Debug */,
-				46492B9B1B895E4F00B8C9EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

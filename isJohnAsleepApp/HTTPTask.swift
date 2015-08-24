@@ -170,8 +170,8 @@ public class HTTPTask : NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate
     public var auth:((NSURLAuthenticationChallenge) -> NSURLCredential?)?
     
     //This is for doing SSL pinning
-    public var security: HTTPSecurity?
-    
+//    public var security: HTTPSecurity?
+	
     //MARK: Public Methods
     
     /// A newly minted HTTPTask for your enjoyment.
@@ -438,30 +438,30 @@ public class HTTPTask : NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate
     //MARK: NSURLSession Delegate Methods
     
     /// Method for authentication challenge.
-    public func URLSession(session: NSURLSession, task: NSURLSessionTask, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
-        if let sec = security where challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-            let space = challenge.protectionSpace
-            if let trust = space.serverTrust {
-                if sec.isValid(trust, domain: space.host) {
-                    completionHandler(.UseCredential, NSURLCredential(trust: trust))
-                    return
-                }
-            }
-            completionHandler(.CancelAuthenticationChallenge, nil)
-            return
-            
-        } else if let a = auth {
-            let cred = a(challenge)
-            if let c = cred {
-                completionHandler(.UseCredential, c)
-                return
-            }
-            completionHandler(.RejectProtectionSpace, nil)
-            return
-        }
-        completionHandler(.PerformDefaultHandling, nil)
-    }
-    
+//    public func URLSession(session: NSURLSession, task: NSURLSessionTask, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+//        if let sec = security where challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+//            let space = challenge.protectionSpace
+//            if let trust = space.serverTrust {
+//                if sec.isValid(trust, domain: space.host) {
+//                    completionHandler(.UseCredential, NSURLCredential(trust: trust))
+//                    return
+//                }
+//            }
+//            completionHandler(.CancelAuthenticationChallenge, nil)
+//            return
+//            
+//        } else if let a = auth {
+//            let cred = a(challenge)
+//            if let c = cred {
+//                completionHandler(.UseCredential, c)
+//                return
+//            }
+//            completionHandler(.RejectProtectionSpace, nil)
+//            return
+//        }
+//        completionHandler(.PerformDefaultHandling, nil)
+//    }
+	
     //MARK: Methods for background download/upload
     
     ///update the download/upload progress closure
@@ -472,7 +472,7 @@ public class HTTPTask : NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate
             if current > 1 {
                 current = 1;
             }
-            if let blocks = backgroundTaskMap[session.configuration.identifier] {
+            if let blocks = backgroundTaskMap[session.configuration.identifier!] {
                 if blocks.progress != nil {
                     blocks.progress!(current)
                 }
@@ -483,7 +483,7 @@ public class HTTPTask : NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate
     //call the completionHandler closure for upload/download requests
     func handleFinish(session: NSURLSession, task: NSURLSessionTask, response: AnyObject) {
         if session.configuration.valueForKey("identifier") != nil { //temp workaround for radar: 21097168
-            if let blocks = backgroundTaskMap[session.configuration.identifier] {
+            if let blocks = backgroundTaskMap[session.configuration.identifier!] {
                 if let handler = blocks.completionHandler {
                     var resp = HTTPResponse()
                     if let hresponse = task.response as? NSHTTPURLResponse {
@@ -500,7 +500,7 @@ public class HTTPTask : NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate
                     handler(resp)
                 }
             }
-            cleanupBackground(session.configuration.identifier)
+            cleanupBackground(session.configuration.identifier!)
         }
     }
     
@@ -508,14 +508,14 @@ public class HTTPTask : NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate
     public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
         if let err = error {
             if session.configuration.valueForKey("identifier") != nil { //temp workaround for radar: 21097168
-                if let blocks = backgroundTaskMap[session.configuration.identifier] {
+                if let blocks = backgroundTaskMap[session.configuration.identifier!] {
                     if let handler = blocks.completionHandler {
                         var res = HTTPResponse()
                         res.error = err
                         handler(res)
                     }
                 }
-                cleanupBackground(session.configuration.identifier)
+                cleanupBackground(session.configuration.identifier!)
             }
         }
     }
